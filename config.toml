@@ -1,0 +1,14 @@
+default = 'firefox'
+
+[[browsers]]
+command = 'firefox-developer-edition'
+domains = [
+    "github.com",
+]
+
+[[browsers]]
+command = 'chromium'
+domains = [
+    'meet.google.com'
+]
+

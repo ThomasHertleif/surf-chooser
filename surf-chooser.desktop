@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=SurfChooser
+Comment=Open an HTTP/HTTPS URL with a particular browser
+Exec=/opt/surf-chooser/surf-chooser %u
+X-MultipleArgs=false
+Type=Application
+Terminal=false
+NoDisplay=true
+MimeType=x-scheme-handler/http;x-scheme-handler/https
