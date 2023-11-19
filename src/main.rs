@@ -10,6 +10,7 @@ use url::Url;
 #[derive(Debug, Deserialize)]
 struct Browser {
     command: String,
+    args: Option<Vec<String>>,
     domains: Vec<String>,
 }
 
@@ -50,6 +51,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 for domain in browser.domains {
                     if url_arg.host_str() == Some(&domain) {
                         Command::new(&browser.command)
+                            .args(&browser.args.unwrap_or_default())
                             .arg(url_arg.as_str())
                             .spawn()
                             .expect("Failed to execute command");

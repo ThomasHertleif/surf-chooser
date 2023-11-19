@@ -12,3 +12,12 @@ domains = [
     'meet.google.com'
 ]
 
+[[browsers]]
+command = 'firefox'
+args = [
+    '--private-window'
+]
+domains = [
+    "gitlab.com",
+]
+
